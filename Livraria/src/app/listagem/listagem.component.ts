@@ -4,12 +4,12 @@ import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { ResumoTextoPipe } from '../resumotexto.pipe'; // Corrija o caminho conforme necessário
+import { ResumoTextoPipe } from '../resumotexto.pipe'; 
 
 @Component({
   selector: 'app-listagem',
   standalone: true,
-  imports: [CommonModule, RouterModule, FormsModule, ResumoTextoPipe], // Importe o pipe corretamente
+  imports: [CommonModule, RouterModule, FormsModule, ResumoTextoPipe], 
   templateUrl: './listagem.component.html',
   styleUrls: ['./listagem.component.css'],
 })
@@ -17,8 +17,7 @@ export class ListagemComponent implements OnInit {
   livros: any[] = [];
   titulo: string = '';
   page: number = 1;
-  totalPages: number = 0; // Inicializa com um valor padrão
-
+  totalPages: number = 0; 
   constructor(private livroService: LivroService, private router: Router) {}
 
   ngOnInit() {
@@ -28,17 +27,17 @@ export class ListagemComponent implements OnInit {
   buscarLivros(): void {
     this.livroService.buscarLivros(this.titulo, this.page).subscribe(
       (data: any) => {
-        console.log('Dados retornados:', data); // Verifique os dados retornados
+        console.log('Dados retornados:', data); 
         if (data && data.docs) {
-          console.log('Livros encontrados:', data.docs); // Adicione este log
-          this.livros = data.docs; // Exibir todos os livros
+          console.log('Livros encontrados:', data.docs); 
+          this.livros = data.docs; 
           this.totalPages = Math.ceil(data.numFound / 15);
         } else {
           console.error('Dados não possuem o formato esperado:', data);
         }
       },
       (error) => {
-        console.error('Erro ao buscar livros:', error); // Verifique se há algum erro
+        console.error('Erro ao buscar livros:', error); 
       }
     );
   }

@@ -1,32 +1,28 @@
-/* Estilo Geral */
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #e3f2fd; /* Fundo azul claro */
-  color: #333; /* Texto em cor escura para boa legibilidade */
+  background-color: #e3f2fd;
+  color: #333;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
 
-/* Container dos Detalhes */
 .detalhes-container {
   padding: 20px;
   max-width: 800px;
-  margin: 20px auto; /* Adiciona margem superior para centralizar */
-  background: #ffffff; /* Fundo branco */
+  margin: 20px auto;
+  background: #ffffff;
   border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-  text-align: center; /* Centralizar texto */
-  border: 1px solid #e1e1e1; /* Borda clara */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border: 1px solid #e1e1e1;
   margin-top: 50px;
   margin-bottom: 50px;
-
 }
 
-/* Conteúdo dos Detalhes */
 .detalhes-content {
   display: flex;
   flex-direction: column;
@@ -34,54 +30,47 @@ body {
   margin: 20px;
 }
 
-/* Grupo de Botões */
 .button-group {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-top: 20px; /* Espaço acima dos botões */
+  margin-top: 20px;
 }
 
-/* Título do Livro */
 h1 {
-  font-size: 2em; /* Aumenta o tamanho do texto */
-  color: #2c3e50; /* Azul escuro */
-  margin-bottom: 20px; /* Espaço abaixo do título */
+  font-size: 2em;
+  color: #2c3e50;
+  margin-bottom: 20px;
 }
 
-/* Imagem da Capa do Livro */
 .livro-capa {
   width: 200px;
   height: auto;
   margin-bottom: 20px;
-  border-radius: 10px; /* Bordas arredondadas */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave na imagem */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Informações do Livro */
 p {
-  font-size: 1.1em; /* Aumenta o tamanho do texto */
-  color: #555; /* Texto em cinza escuro */
-  margin: 10px 0; /* Espaço entre parágrafos */
-  line-height: 1.6; /* Altura da linha maior para melhor legibilidade */
+  font-size: 1.1em;
+  color: #555;
+  margin: 10px 0;
+  line-height: 1.6;
 }
 
-/* Texto Negrito */
 strong {
-  color: #2c3e50; /* Azul escuro */
+  color: #2c3e50;
 }
 
-/* Estilo para o Texto de Carregamento */
 .loading {
   font-size: 1.2em;
-  color: #888; /* Texto em cinza claro */
+  color: #888;
   margin-top: 20px;
 }
 
-/* Botões de Navegação */
 .nav-button {
   padding: 10px 20px;
-  background-color: #3498db; /* Azul claro */
+  background-color: #3498db;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -91,4 +80,61 @@ strong {
 
 .nav-button:hover {
   background-color: #2980b9;
+}
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .detalhes-container {
+    margin: 10px auto;
+    width: 90%;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  .livro-capa {
+    width: 150px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .detalhes-container {
+    margin: 10px auto;
+    width: 95%;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.2em;
+  }
+
+  p {
+    font-size: 0.9em;
+  }
+
+  .livro-capa {
+    width: 120px;
+    margin-bottom: 10px;
+  }
+
+  .nav-button {
+    width: 100%;
+    padding: 8px 15px;
+  }
 }

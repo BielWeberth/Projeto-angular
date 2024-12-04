@@ -1,18 +1,15 @@
-
-/* Estilo Geral */
 .body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: white; /* Fundo branco */
-  color: #333; /* Texto em cor escura para boa legibilidade */
+  background-color: white;
+  color: #333;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   border: none;
 }
 
-/* Container Principal */
 .home-container {
   background-color: white;
   justify-content: center;
@@ -20,10 +17,9 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 200px;
-  padding: 0; 
+  padding: 0;
 }
 
-/* Cabeçalho */
 .header {
   text-align: center;
   margin-bottom: 40px;
@@ -31,15 +27,14 @@
 
 .main-title {
   font-size: 2.5em;
-  color: #2c3e50; /* Azul escuro */
+  color: #2c3e50;
 }
 
 .description {
   font-size: 1.2em;
-  color: #555; /* Cinza escuro */
+  color: #555;
 }
 
-/* Navegação */
 .navigate-list {
   text-align: center;
   margin-bottom: 40px;
@@ -48,7 +43,7 @@
 .list-link {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #3498db; /* Azul claro */
+  background-color: #3498db;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -56,69 +51,65 @@
 }
 
 .list-link:hover {
-  background-color: #2980b9; /* Azul escuro */
+  background-color: #2980b9;
 }
 
-/* Seção de Livros */
 .livros-section {
   text-align: center;
 }
 
 .section-title {
   font-size: 2em;
-  color: #2c3e50; /* Azul escuro */
+  color: #2c3e50;
   margin-bottom: 20px;
 }
 
-/* Grade de Livros */
 .livros-grid {
   display: flex;
   justify-content: center;
   gap: 20px;
-  flex-wrap: wrap; /* Permite quebrar linha se houver muitos itens */
+  flex-wrap: wrap;
 }
 
 .livro-card {
-  background: #ffffff; /* Fundo branco caixa */
+  background: #ffffff;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.3); /* Sombra suave */
+  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.3);
   width: 250px;
-  text-align: center; /* Centralizar o texto */
+  text-align: center;
   transition: transform 0.3s ease;
-  border: 1px solid rgb(180, 180, 180)
+  border: 1px solid rgb(180, 180, 180);
 }
 
 .livro-card:hover {
-  transform: translateY(-10px); /* Efeito de elevação ao passar o mouse */
+  transform: translateY(-10px);
 }
 
-/* Imagem da Capa do Livro */
 .livro-capa {
   width: 100%;
   height: auto;
   margin-bottom: 15px;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave na imagem */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Detalhes do Livro */
 .livro-title {
   font-size: 1.5em;
-  color: #2c3e50; /* Azul escuro */
+  color: #2c3e50;
   margin-bottom: 10px;
 }
 
 .livro-author, .livro-year {
   font-size: 1em;
-  color: #555; /* Cinza escuro */
+  color: #555;
   margin: 5px 0;
 }
 
 .details-link {
   display: inline-block;
   padding: 10px 15px;
-  background-color: #3498db; /* Azul claro */
+  background-color: #3498db;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -126,17 +117,15 @@
 }
 
 .details-link:hover {
-  background-color: #2980b9; /* Azul escuro */
+  background-color: #2980b9;
 }
 
-/* Estilo para o Texto de Carregamento */
 .loading {
   font-size: 1.2em;
-  color: #888; /* Texto em cinza claro */
+  color: #888;
   margin-top: 20px;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
   .livros-grid {
     flex-direction: column;

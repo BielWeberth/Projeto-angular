@@ -1,29 +1,26 @@
-/* Estilo Geral */
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f0f2f5; /* Cor de fundo clara */
+  background-color: #f0f2f5;
   color: #333;
   height: 100%;
 }
 
-/* Listagem de Livros */
 .listagem-container {
   padding: 20px;
   max-width: 800px;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.9); /* Fundo com transparência */
+  background: rgba(255, 255, 255, 0.9);
   border-radius: 15px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
   margin-top: 50px;
   margin-bottom: 50px;
-  
 }
 
 h1 {
   text-align: center;
-  color: rgb(59, 59, 59); /* Azul claro */
+  color: rgb(59, 59, 59);
 }
 
 .search-section {
@@ -43,7 +40,7 @@ h1 {
 
 .search-button {
   padding: 10px 20px;
-  background-color: #2ecc71; /* Verde claro */
+  background-color: #2ecc71;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -115,7 +112,7 @@ h1 {
 .no-results {
   text-align: center;
   margin-top: 20px;
-  color: #e74c3c; /* Vermelho para chamar atenção */
+  color: #e74c3c;
 }
 
 .pagination {
@@ -144,10 +141,10 @@ h1 {
 .pagination span {
   margin: 0 10px;
 }
-/* Botão Voltar para Home */
+
 .home-button {
   padding: 10px 20px;
-  background-color: #3498db; /* Azul claro */
+  background-color: #3498db;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -159,4 +156,52 @@ h1 {
 
 .home-button:hover {
   background-color: #2980b9;
+}
+
+@media (max-width: 768px) {
+  .listagem-container {
+    padding: 10px;
+  }
+  
+  .search-input {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .search-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .livro-item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .livro-capa {
+    width: 80px;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5em;
+  }
+
+  .search-button {
+    width: 100%;
+  }
+
+  .details-link {
+    font-size: 1em;
+    padding: 8px 10px;
+  }
+
+  .pagination button {
+    padding: 8px 15px;
+  }
 }

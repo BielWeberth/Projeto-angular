@@ -4,7 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { ListagemComponent } from './listagem/listagem.component'; // Importe ListagemComponent
+import { ListagemComponent } from './listagem/listagem.component'; 
 
 
 @NgModule({
@@ -16,7 +16,7 @@ import { ListagemComponent } from './listagem/listagem.component'; // Importe Li
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ListagemComponent // Importe ListagemComponent aqui
+    ListagemComponent 
   ],
   providers: [],
   bootstrap: [AppComponent]
