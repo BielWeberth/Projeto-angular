@@ -1,0 +1,37 @@
+<section class="home-container">
+  <header class="header">
+    <h1 class="main-title">Bem-vindo à Livraria</h1>
+    <p class="description">Explore nossa vasta coleção de livros e encontre sua próxima leitura favorita.</p>
+  </header>
+  <nav class="navigate-list">
+    <a [routerLink]="['/listagem']" class="list-link">Listagem</a>
+  </nav>
+
+  <section class="livros-section">
+    <h2 appHighlight highlightColor="lightblue" class="section-title">Destaques</h2> <!-- Espaço adicionado entre os atributos -->
+
+    <div *ngIf="loading" class="loading">
+      <p>Carregando livros...</p>
+    </div>
+
+    <div *ngIf="!loading && livros.length > 0" class="livros-grid">
+      <article *ngFor="let livro of livros" class="livro-card">
+        <div class="livro-info">
+          <img *ngIf="livro.cover_i" [src]="'https://covers.openlibrary.org/b/id/' + livro.cover_i + '-L.jpg'" alt="Capa do livro" class="livro-capa">
+          <div class="livro-details">
+            <h3 class="livro-title">{{ livro.title }}</h3>
+            <p class="livro-author"><strong>Autor(es):</strong> {{ getAutores(livro) }}</p>
+            <p class="livro-year" *ngIf="livro.first_publish_year">
+              <strong>Ano:</strong> {{ livro.first_publish_year }}
+            </p>
+            <a [routerLink]="['/detalhes', livro.key.split('/')[2]]" class="details-link">Ver Detalhes</a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div *ngIf="!loading && livros.length === 0">
+      <p>Não foram encontrados livros.</p>
+    </div>
+  </section>
+</section>

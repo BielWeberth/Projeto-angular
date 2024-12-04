@@ -1,0 +1,32 @@
+<div class="listagem-container">
+  <h1>Lista de Livros</h1>
+  
+  
+  <div class="search-section">
+    <button (click)="irParaHome()" class="home-button">Voltar para Home</button>
+    <input [(ngModel)]="titulo" class="search-input" placeholder="Pesquisar livro">
+    <button (click)="buscarLivros()" class="search-button">Buscar</button>
+  </div>
+
+  <div class="livros-list" *ngIf="livros.length > 0">
+    <div *ngFor="let livro of livros" class="livro-item">
+      <img *ngIf="livro.cover_i" [src]="'https://covers.openlibrary.org/b/id/' + livro.cover_i + '-L.jpg'" alt="Capa do livro" class="livro-capa">
+      <div class="livro-details">
+        <h3 class="livro-title">{{ livro.title }}</h3>
+        <p class="livro-author"><strong>Autor(es):</strong> {{ getAutores(livro) }}</p>
+        <p class="livro-description">{{ livro.first_sentence ? livro.first_sentence[0] : 'Descrição não disponível' }}</p>
+        <a [routerLink]="['/detalhes', livro.key.split('/')[2]]" class="details-link">Ver Detalhes</a>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="livros.length === 0" class="no-results">
+    <p>Nenhum livro encontrado. Tente novamente com outro título.</p>
+  </div>
+
+  <div class="pagination">
+    <button (click)="previousPage()" [disabled]="page === 1">Anterior</button>
+    <span>Página {{ page }} de {{ totalPages }}</span>
+    <button (click)="nextPage()" [disabled]="page === totalPages">Próxima</button>
+  </div>
+</div>

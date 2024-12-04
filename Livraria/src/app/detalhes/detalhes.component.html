@@ -1,0 +1,16 @@
+<div class="detalhes-container">
+  <div class="detalhes-content" *ngIf="livroDetalhes">
+    <h1>{{ livroDetalhes.title }}</h1>
+    <img *ngIf="livroDetalhes.covers?.length" [src]="'https://covers.openlibrary.org/b/id/' + livroDetalhes.covers[0] + '-L.jpg'" alt="Capa do livro" class="livro-capa">
+    <p><strong>Autor(es):</strong> {{ getAutores() }}</p>
+    <p><strong>Sinopse:</strong> {{ livroDetalhes.description ? livroDetalhes.description.value || livroDetalhes.description : 'Sinopse não disponível' }}</p>
+    <p><strong>Ano de Lançamento:</strong> {{ livroDetalhes.first_publish_date ? livroDetalhes.first_publish_date : 'Ano não disponível' }}</p>
+    <div class="button-group">
+      <button (click)="irParaHome()" class="nav-button">Ir para Home</button>
+      <button (click)="irParaListagem()" class="nav-button">Ir para Listagem</button>
+    </div>
+  </div>
+  <div *ngIf="!livroDetalhes" class="loading">
+    <p>Carregando detalhes do livro...</p>
+  </div>
+</div>
